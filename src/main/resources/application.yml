@@ -1,0 +1,21 @@
+#默认使用配置
+spring:
+  profiles:
+    active: dev
+
+#公共配置与profiles选择无关
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  type-aliases-package: org.example.user.User
+
+---  #分隔线不能少
+
+#开发配置
+#spring:
+  #profiles: dev
+
+datasource:
+  url: jdbc:mysql://localhost:3306/test       #数据库地址+数据库名字(自定义)
+  username: root                              #帐号(自定义)
+  password: root                              #密码(自定义)
+  driver-class-name: com.mysql.jdbc.Driver    #驱动
